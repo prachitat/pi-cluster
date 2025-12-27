@@ -14,3 +14,9 @@ spec:
     name: flux-system
   path: ./apps/staging
   prune: true
+  # in the apps.yaml Kustomization file, add under spec:
+# (same level as prune: true)
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-age
